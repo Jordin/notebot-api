@@ -67,7 +67,7 @@ public class NoteBot<I extends Enum<I>> {
         return new NoteBotSong<>(name, trimmedDuration, actions);
     }
 
-    private void removeExtraneousRests(final List<NoteBotAction<I>> actions) {
+    public final void removeExtraneousRests(final List<NoteBotAction<I>> actions) {
         // remove leading
         while (!actions.isEmpty() && actions.get(0) instanceof Rest) {
             actions.remove(0);
