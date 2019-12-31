@@ -90,7 +90,7 @@ public class NoteBotTest {
 
         noteBot.write(file, actions);
 
-        NoteBotSong<MinecraftInstrument> song = noteBot.read(file);
+        final NoteBotSong<MinecraftInstrument> song = noteBot.read(file);
 
         Assertions.assertEquals(1, song.actions.size());
         Assertions.assertEquals(0, song.duration);
@@ -107,6 +107,8 @@ public class NoteBotTest {
         final List<NoteBotAction<MinecraftInstrument>> actions = new ArrayList<>();
 
         int expectedDuration = 0;
+
+        actions.add(Note.of(MinecraftInstrument.HARP, 0));
 
         for (int duration = Rest.REST_DURATION_MIN; duration <= Rest.REST_DURATION_MAX; duration++) {
             expectedDuration += duration;
@@ -141,7 +143,7 @@ public class NoteBotTest {
 
         noteBot.write(file, songActions);
 
-        NoteBotSong<MinecraftInstrument> song = noteBot.read(file);
+        final NoteBotSong<MinecraftInstrument> song = noteBot.read(file);
         Assertions.assertEquals("Song D", song.name);
         Assertions.assertEquals(100, song.duration);
 
