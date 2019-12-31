@@ -16,14 +16,14 @@ dependencies {
 ```
 
 Then, create a [NoteBot](https://github.com/Jordin/notebot-api/blob/master/src/main/java/in/jord/notebot/api/NoteBot.java) instance with your desired instrument set, for example:
-```java_holder_method_tree
+```java
 NoteBot<MinecraftInstrument> notebot = new Notebot<>(MinecraftInstrument.class);
 NoteBot<MinecraftInstrument> notebot = new MinecraftNoteBot();
 ```
 
 Songs can be programmatically created using [Note](https://github.com/Jordin/notebot-api/blob/master/src/main/java/in/jord/notebot/api/action/Note.java) and [Rest](https://github.com/Jordin/notebot-api/blob/master/src/main/java/in/jord/notebot/api/action/Rest.java) actions.
 For example:
-```java_holder_method_tree
+```java
 List<NoteBotAction<MinecraftInstrument>> actions = new ArrayList<>();
 actions.add(Note.of(MinecraftInstrument.BIT, 0));
 actions.add(Note.of(MinecraftInstrument.BIT, 1));
@@ -35,7 +35,7 @@ actions.add(Note.of(MinecraftInstrument.GUITAR, 6));
 
 With a [NoteBot](https://github.com/Jordin/notebot-api/blob/master/src/main/java/in/jord/notebot/api/NoteBot.java) instance, songs may be read and written in the following ways:
 
-```java_holder_method_tree
+```java
 NoteBotSong<?> song = noteBot.read(file);
 NoteBotSong<?> song = noteBot.read("Song Name", customInputStream);
 
