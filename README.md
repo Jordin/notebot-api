@@ -90,4 +90,4 @@ If a rest duration shorter than `0` time quanta is desired, please contact your 
 
 A catalogue of songs encoded in this format can be found [here](https://github.com/Jordin/notebot-songs/tree/notebot-1.0.0) 
 with a direct download [here](https://github.com/Jordin/notebot-songs/archive/notebot-1.0.0.zip). 
-These songs are free to use, distribute, and modify, with one exception: do not sell them. 
+These songs are free to use, distribute, and modify.
